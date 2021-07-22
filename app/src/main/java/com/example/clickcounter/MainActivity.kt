@@ -13,9 +13,21 @@ class MainActivity : AppCompatActivity() {
         var counter : Int = 0
         val clickCount: TextView = findViewById(R.id.click_count)
         val showClickCount: Button = findViewById(R.id.show_click_count)
+        val toggle: Button = findViewById(R.id.toggle)
 
         showClickCount.setOnClickListener{
             clickCount.setText("Button Clicked ${++counter} times")
+        }
+
+        toggle.setOnClickListener{
+            if(showClickCount.isEnabled){
+                showClickCount.isEnabled = false
+                toggle.setText("Enable")
+            }
+            else{
+                showClickCount.isEnabled = true
+                toggle.setText("Disabled")
+            }
         }
     }
 }
