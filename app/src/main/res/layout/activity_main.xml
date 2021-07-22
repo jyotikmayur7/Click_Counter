@@ -6,6 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/show_click_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/toggle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/click_count" />
+
+    <Button
+        android:id="@+id/toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENABLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/show_click_count"
+        app:layout_constraintTop_toTopOf="@+id/show_click_count" />
+
     <TextView
         android:id="@+id/click_count"
         android:layout_width="wrap_content"
@@ -17,15 +38,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.373" />
-
-    <Button
-        android:id="@+id/show_click_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/click_count"
-        app:layout_constraintStart_toStartOf="@+id/click_count"
-        app:layout_constraintTop_toBottomOf="@+id/click_count" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
